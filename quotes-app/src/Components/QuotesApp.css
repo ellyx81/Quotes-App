@@ -1,0 +1,162 @@
+.container {
+  width: 100%;
+  height: 100dvh;
+  background-color: #005d74;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.quotes-app {
+  width: 90vmin;
+  aspect-ratio: 3 / 2;
+  padding: 1rem;
+  display: grid;
+  gap: 5.5rem;
+  position: relative;
+}
+
+.app-heading {
+  color: #ffd234;
+  font-size: 4.8rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+  line-height: 7rem;
+}
+
+.fav-icon {
+  position: absolute;
+  top: 2.8rem;
+  right: 1rem;
+  font-size: 4rem;
+  color: #ffd234;
+  cursor: pointer;
+  /* text-shadow: -0.3rem 0.5rem 2rem #ffcf2969; */
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+  transition: all 0.2s ease-in-out;
+}
+
+.fav-icon:active {
+  transform: scale(1.3);
+}
+
+.quote-wrapper {
+  position: relative;
+  display: inline-block;
+  height: max-content;
+  min-height: 32rem;
+}
+
+.quote {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  padding: 2.7rem 5rem;
+  border-radius: 3.2rem;
+  height: 100%;
+  background: url("../Assets/bg-img.png") center / cover no-repeat;
+  box-shadow: 0px 16px 32px -8px rgba(12, 12, 13, 40%);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-bg {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  width: 100%;
+  height: 100%;
+  background-color: #18697d;
+  border-radius: 3.2rem;
+  transform: rotate(-2.5deg);
+  box-shadow: 0px 16px 16px -8px rgba(12, 12, 13, 10%),
+    0px 4px 4px -4px rgba(12, 12, 13, 5%);
+  z-index: 0;
+}
+
+.quote-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  width: 100%;
+  height: 100%;
+  background-color: #127790;
+  border-radius: 3.2rem;
+  transform: rotate(6deg);
+  box-shadow: 0px 16px 16px -8px rgba(12, 12, 13, 10%),
+    0px 4px 4px -4px rgba(12, 12, 13, 5%);
+  z-index: -1;
+}
+
+.left-quote {
+  font-size: 5rem;
+}
+
+.quote-text {
+  font-size: 4.6rem;
+  font-size: clamp(4rem, 2.5vw, 6rem);
+  font-family: "Just Me Again Down Here", cursive;
+  line-height: clamp(4rem, 2.5vw, 6rem);
+  width: 68%;
+  text-align: center;
+  margin: 1.2rem auto 0;
+}
+
+.quote-author {
+  font-size: 2.4rem;
+  align-self: end;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.quote-author::before {
+  content: "—";
+  font-size: 2.4rem;
+}
+
+.left-quote,
+.quote-text,
+.quote-author {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.buttons .bx {
+  font-size: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn {
+  height: 4rem;
+  padding: 0 2.4rem;
+  font-size: 1.4rem;
+  background-color: #ffd234;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25%);
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons .bx:active,
+.btn:active {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .quote {
+    padding: 2.7rem 2rem;
+  }
+  .quote-text {
+    width: 80%;
+  }
+}
